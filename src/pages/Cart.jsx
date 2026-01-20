@@ -1,15 +1,28 @@
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
+import { removeFromCart } from "../features/cart/cartSlice";
 
 function Cart() {
   const cartItems = useSelector(state => state.cart);
+  const dispatch = useDispatch();
 
   return (
-    <>
-      <h2>Cart</h2>
+    <div className="container">
+      <h2>Your Cart</h2>
+
+      {cartItems.length === 0 && <p>Cart is empty</p>}
+
       {cartItems.map(item => (
-        <p key={item.id}>{item.title}</p>
+        <div className="cart-item" key={item.id}>
+          <span>{item.title}</span>
+          <button
+            className="btn btn-danger"
+            onClick={() => dispatch(removeFromCart(item.id))}
+          >
+            Remove
+          </button>
+        </div>
       ))}
-    </>
+    </div>
   );
 }
 
