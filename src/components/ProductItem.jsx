@@ -35,7 +35,7 @@ function ProductItem({ product }) {
       </button>
 
       {added && (
-        <p style={{ color: "green", marginTop: "8px" }}>
+        <p className="added-msg">
           ✔ Added to cart
         </p>
       )}

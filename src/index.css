@@ -121,3 +121,8 @@ input {
   text-align: center;
   padding: 80px;
 }
+.added-msg {
+  color: green;
+  font-size: 14px;
+  margin-top: 5px;
+}
