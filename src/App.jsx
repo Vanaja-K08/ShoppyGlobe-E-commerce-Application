@@ -5,7 +5,7 @@ function App() {
 
   return (
     <>
-    
+     <h1>ShoppyGlobe App Running</h1>
     </>
   )
 }
