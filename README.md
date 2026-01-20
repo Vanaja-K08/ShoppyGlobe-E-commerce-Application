@@ -1,3 +1,10 @@
+Git URL
+
+https://github.com/Vanaja-K08/ShoppyGlobe-E-commerce-Application
+
+----------------------------------------------------------------------------------------------
+
+
 ShoppyGlobe – E-Commerce React Application
 
 ShoppyGlobe is a basic e-commerce web application built using React + Vite, Redux, and React Router.
