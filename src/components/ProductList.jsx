@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import ProductItem from "./ProductItem";
 
 function ProductList() {
   const [products, setProducts] = useState([]);
@@ -11,14 +11,9 @@ function ProductList() {
   }, []);
 
   return (
-    <div>
-      <h2>Products</h2>
+    <div className="product-grid">
       {products.map(product => (
-        <div key={product.id} style={{ border: "1px solid #ccc", margin: "10px" }}>
-          <h4>{product.title}</h4>
-          <p>₹ {product.price}</p>
-          <Link to={`/product/${product.id}`}>View Details</Link>
-        </div>
+        <ProductItem key={product.id} product={product} />
       ))}
     </div>
   );
