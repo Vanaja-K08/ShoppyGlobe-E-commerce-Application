@@ -1,13 +1,16 @@
-import { useLocation } from "react-router-dom";
+import { useLocation, Link } from "react-router-dom";
 
 function NotFound() {
   const location = useLocation();
 
   return (
-    <>
-      <h2>404 Page Not Found</h2>
-      <p>Invalid URL: {location.pathname}</p>
-    </>
+    <div className="notfound">
+      <h1>404</h1>
+      <p>Page not found: {location.pathname}</p>
+      <Link to="/">
+        <button className="btn btn-primary">Go Home</button>
+      </Link>
+    </div>
   );
 }
 
