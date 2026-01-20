@@ -1,6 +1,9 @@
 import { Link } from "react-router-dom";
+import { useSelector } from "react-redux";
 
 function Header() {
+  const cartItems = useSelector((state) => state.cart);
+
   return (
     <nav className="navbar">
       <div>
@@ -9,7 +12,7 @@ function Header() {
 
       <div>
         <Link to="/">Home</Link>
-        <Link to="/cart">Cart 🛒</Link>
+        <Link to="/cart">Cart 🛒 ({cartItems.length})</Link>
       </div>
     </nav>
   );
